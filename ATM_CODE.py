@@ -1,43 +1,39 @@
-go=input("enter link of google account")
-if go=="account.google.com":
-    print("crate a google account")
-    name=input("please enter your first name")
-    if name>="A" or name<="Z" and name>="a"or name<="z" :
-        print(name)
-        name2=input("please enter your last name")
-        if name2>="A" or name2<="Z" and name2>="a" or name2<="z":
-            print(name2)
-            psd=input("create your password")
-            if psd>="A" or psd<="Z"and psd>="a" or psd<="z" or psd>=1 or psd<=9 and psd=="#" or psd=="@":
-                print("create psd",psd)
-                num=int(input("enter the number"))
-                if num>=1 or num<=10:
-                    print(num)
-                    year=input("enter the year")
-                    month=input("enter the month")
-                    day=input("enter the day")
-                    if year>="1980" or year<="2022" or month>="1" or month<="12" or day>="1" or day<="31":
-                        print("birthdate",year+"/"+month+"/"+day)
-                        gender=input("enter the gender")
-                        if gender=="male" and gender=="female":
-                            print("gender")
-                            email=input("enter your email")
-                            if email<="a" or email<="z" or email>="1" or email<="9" or email=="@":
-                                print("email")
-                                print("gmail successfully")
+print("       welcome to state bank of india swipe your card    ")
+print("please do not remove your card:-")
+amount=100000
+card=input("enter your card")
+if card=="debit":
+       lang=input("enter your language")
+       if lang=="english":
+              pin=input("enter your pin")
+              if len(pin)==4:
+                    trans=input("enter your transtion")
+                    if trans=="withdrowl":
+                            withdrowl=int(input("enter the withdrowl amount"))
+                            if withdrowl<amount:
+                                 print("you can take a cash")
+                    elif trans=="transfer_money":
+                            transfer_money=int(input("enter the transfer money"))
+                            if transfer_money<=amount:
+                                   print("your money successfully transfed")
                             else:
-                                print("wrong gmail ")
-                        else:
-                            print("incorrect gender")
-                    else:
-                        print("incorrect birthdate")
-                else:
-                    print("incorrect number")
-            else:
-                print("incorrect password")
-        else:
-            print("incorrect last name")
-    else:
-        print("incorrect first name")
+                                   print("enter valid amount")
+                    elif trans=="change_pin":
+                            change_pin=input("enter change pin")
+                            if len(change_pin)==4:
+                                   print("succesfuly change your pin")
+                            else:
+                                   print("enter valid change pin")
+                    elif trans=="deposit":
+                            deposit=int(input("enter yoyr deposit amount"))
+                            if deposit>1000:
+                                   print("your money is succesfuly deposit")
+                            else:
+                                   print("please enter valid amount")
+              else:
+                     print("enter valid pin")
+       else:
+              print("enter valid language")
 else:
-    print("wrong gmail account")
+       print("please enter valid card")
+	
